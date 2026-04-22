@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fradel & Sweets | The Dubai Cookie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #453026; margin: 0; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* INFINITE AUTO-SLIDER (No pause on hover) */
+        .slider-container {
+            overflow: hidden;
+            padding: 40px 0;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .tiktok-track {
+            display: flex;
+            width: calc(300px * 10); /* Adjust based on card count */
+            animation: scroll 25s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-300px * 5)); } /* Moves half the cards to loop */
+        }
+
+        .video-card {
+            width: 280px;
+            height: 480px;
+            background: #fdf2f4;
+            border-radius: 24px;
+            margin: 0 10px;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .video-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            white-space: normal;
+        }
+
+        .text-pistachio { color: #15803d; }
+        .text-kunafa { color: #b45309; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md px-10 py-6 flex justify-between items-center border-b border-stone-100">
+        <div class="text-xl font-bold tracking-tighter uppercase">Fradel & <span class="text-[#d17589]">Sweets</span></div>
+        <div class="space-x-10 text-xs font-semibold tracking-widest uppercase">
+            <a href="#shop" class="hover:text-[#d17589] transition">The Cookie</a>
+            <a href="checkout.html" class="bg-[#5c4033] text-white px-6 py-2 rounded-full hover:bg-[#d17589] transition">Checkout</a>
+        </div>
+    </nav>
+
+    <section class="h-[75vh] flex flex-col justify-center items-center text-center px-6 bg-[#fdf2f4]">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-[#d17589] font-bold tracking-widest text-xs uppercase mb-4 block">Melbourne • Est. 2023</span>
+            <h1 class="text-6xl md:text-8xl mb-6">Sweet Luxury.</h1>
+            <p class="text-stone-500 italic max-w-md mx-auto">Discover the viral $7.50 cookie that redefined indulgence.</p>
+        </div>
+    </section>
+
+    <section id="shop" class="py-24 px-10 max-w-7xl mx-auto overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            
+            <div data-aos="slide-right" data-aos-duration="1200" data-aos-offset="300">
+                <div class="bg-white p-4 rounded-[2.5rem] shadow-2xl border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=800" 
+                         class="rounded-[2rem] w-full object-cover aspect-square" alt="The Dubai Cookie">
+                </div>
+            </div>
+
+            <div class="space-y-8" data-aos="fade-left" data-aos-duration="1000">
+                <span class="bg-[#f6b5c3] text-white px-4 py-1 rounded-full text-xs font-bold uppercase">New Viral Sensation</span>
+                <h2 class="text-5xl font-bold text-[#5c4033]">The $7.50 Dubai Cookie</h2>
+                
+                <p class="text-xl text-stone-600 leading-relaxed font-light">
+                    Experience pure indulgence. We take our thick, soft-baked signature cookie and stuff it to the brim with velvety 
+                    <span class="text-pistachio font-bold">pistachio cream</span> and butter-toasted, crispy 
+                    <span class="text-kunafa font-bold">kunafa pastry</span>. Finished with a decadent 70% dark chocolate shell and a dusting of 24k gold.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="border border-stone-100 p-4 rounded-2xl text-center bg-stone-50">
+                        <span class="text-2xl">🏬🥐</span>
+                        <p class="text-[10px] font-bold mt-2 uppercase text-stone-400">In-Store</p>
+                    </div>
+                    <div class="border border-stone-100 p-4 rounded-2xl text-center bg-stone-50">
+                        <span class="text-2xl">🚚💖</span>
+                        <p class="text-[10px] font-bold mt-2 uppercase text-stone-400">Online</p>
+                    </div>
+                </div>
+
+                <a href="checkout.html" class="block bg-[#5c4033] text-white text-center py-5 rounded-full font-bold text-lg hover:bg-[#d17589] transition-all transform active:scale-95 shadow-xl">
+                    ADD TO CART • $7.50
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="text-center mb-10" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-[#5c4033]">Community Crunch</h2>
+            <p class="text-stone-400 text-sm italic">Never-ending inspiration from TikTok</p>
+        </div>
+        
+        <div class="slider-container">
+            <div class="tiktok-track">
+                <div class="video-card">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                    <div class="video-overlay"><p class="font-bold text-sm">@foodie_melb</p><p class="text-xs">ASMR Crunch! 🤤</p></div>
+                </div>
+                <div class="video-card">
+                    <div class="w-full h-full bg-[#fce7eb] flex items-center justify-center text-5xl">🍓</div>
+                    <div class="video-overlay"><p class="font-bold text-sm">@dessert_lover</p><p class="text-xs">Finally tried it!</p></div>
+                </div>
+                <div class="video-card">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                    <div class="video-overlay"><p class="font-bold text-sm">@viral_finds</p><p class="text-xs">Worth every cent.</p></div>
+                </div>
+                <div class="video-card">
+                    <div class="w-full h-full bg-emerald-50 flex items-center justify-center text-5xl">🍰</div>
+                    <div class="video-overlay"><p class="font-bold text-sm">@fradel_fan</p><p class="text-xs">The gold dust is ✨</p></div>
+                </div>
+                <div class="video-card">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                    <div class="video-overlay"><p class="font-bold text-sm">@asmr_world</p><p class="text-xs">Listen to this! 🔊</p></div>
+                </div>
+
+                <div class="video-card"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover"></div>
+                <div class="video-card"><div class="w-full h-full bg-[#fce7eb] flex items-center justify-center text-5xl">🍓</div></div>
+                <div class="video-card"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover"></div>
+                <div class="video-card"><div class="w-full h-full bg-emerald-50 flex items-center justify-center text-5xl">🍰</div></div>
+                <div class="video-card"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-stone-100 bg-white">
+        <div class="text-2xl mb-4">🍓🍰</div>
+        <p class="text-xs text-stone-400 uppercase tracking-widest font-bold">© 2026 Fradel & Sweets</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false, // Set to false so they slide in every time you scroll up/down
+            mirror: true
+        });
+    </script>
+</body>
+</html>
